@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Habit Tracker</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🚀 Developer Habit Tracker</h1>
+            <p class="subtitle">Build better coding habits, one day at a time</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Stats Section -->
+            <section class="stats-section">
+                <div class="stat-card">
+                    <h3>Total Habits</h3>
+                    <p class="stat-number" id="totalHabits">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Completed Today</h3>
+                    <p class="stat-number" id="completedToday">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Longest Streak</h3>
+                    <p class="stat-number" id="longestStreak">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Overall Progress</h3>
+                    <p class="stat-number" id="overallProgress">0%</p>
+                </div>
+            </section>
+
+            <!-- Add Habit Form -->
+            <section class="add-habit-section">
+                <h2>Add New Habit</h2>
+                <form id="habitForm" class="habit-form">
+                    <div class="form-group">
+                        <input 
+                            type="text" 
+                            id="habitName" 
+                            placeholder="e.g., Daily Coding Practice" 
+                            required
+                        >
+                    </div>
+                    <div class="form-group">
+                        <select id="habitCategory" required>
+                            <option value="">Select Category</option>
+                            <option value="coding">Coding</option>
+                            <option value="learning">Learning</option>
+                            <option value="documentation">Documentation</option>
+                            <option value="review">Code Review</option>
+                            <option value="testing">Testing</option>
+                            <option value="community">Community</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input 
+                            type="number" 
+                            id="habitGoal" 
+                            placeholder="Daily goal (minutes)" 
+                            min="1"
+                        >
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Habit</button>
+                </form>
+            </section>
+
+            <!-- Habits List -->
+            <section class="habits-section">
+                <h2>Your Habits</h2>
+                <div id="habitsList" class="habits-list">
+                    <p class="empty-state">No habits yet. Add one to get started! 🎯</p>
+                </div>
+            </section>
+
+            <!-- Daily Log -->
+            <section class="daily-log-section">
+                <h2>Daily Log</h2>
+                <div id="dailyLog" class="daily-log">
+                    <p class="empty-state">Complete habits to log your progress 📝</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="scripts/app.js"></script>
+</body>
+</html>
